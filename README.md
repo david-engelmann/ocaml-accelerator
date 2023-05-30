@@ -1,3 +1,3 @@
 # ocaml-accelerator
-A Accelerator for getting started in OCaml
+An Accelerator for getting started in OCaml
 
