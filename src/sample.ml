@@ -3,5 +3,8 @@ open Core
 open Async
 *)
 
-let (x : int) = 5
+module Sample = struct
+    (* let it rip *)
+    let (x : int) = 5
+end
 
