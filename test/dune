@@ -1,3 +1,5 @@
-(library (name test)
- (libraries async core)
- (preprocess (pps ppx_jane)))
+(tests
+ (names test_sample)
+ (libraries async core ounit2 ocaml_accelerator)
+ (modules test_sample)
+)
