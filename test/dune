@@ -1,0 +1,5 @@
+(tests
+ (names test_sample)
+ (libraries async core ounit2 ocaml_accelerator)
+ (modules test_sample)
+)
