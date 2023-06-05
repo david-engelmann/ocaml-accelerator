@@ -3,7 +3,7 @@
  (public_name ocaml-accelerator.ocaml_accelerator)
  (libraries async core)
  (preprocess (pps ppx_jane))
- (modules
+ (files
   src/sample.ml
   ))
 
