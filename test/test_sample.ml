@@ -3,16 +3,21 @@ open Core
 open Async
 *)
 open OUnit2
-
-let add x y = x + y
+open Ocaml_accelerator.Sample
 
 let test_addition _ =
-  OUnit2.assert_equal 5 (add 2 3)
+  OUnit2.assert_equal 6 (Sample.add1 Sample.sample_x Sample.sample_y)
+
+let test_mysample4 _ =
+  match Sample.mysample4 with
+   | MySample { value; } ->
+     OUnit2.assert_equal 4 value
 
 let suite =
     "suite" >:::
         [
             "test_addition" >:: test_addition;
+            "test_mysample4" >:: test_mysample4;
         ]
 
 let () =
