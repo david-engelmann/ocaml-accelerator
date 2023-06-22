@@ -56,7 +56,12 @@ jobs:
       - name: Dune Build
         run: opam exec -- dune build
       - name: Dune Test
-        run: opam exec -- dune runtest
+        run: opam exec -- dune runtest 2>&1 | tee dune_runtest.log
+      - name: Upload Log
+        uses: actions/upload-artifact@v2
+        with:
+          name: dune_runtest
+          path: dune_runtest.log
 
   lint-doc:
     strategy:
